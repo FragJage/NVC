@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Kodi" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Kodi" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Kodi" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Test">
+				<Option output="bin/Debug/Kodi" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-std=c++11" />
+			<Add directory="Dependency" />
+			<Add directory="Dependency/jsoncpp/include" />
+			<Add directory="../../src" />
+		</Compiler>
+		<Linker>
+			<Add library="ws2_32" />
+		</Linker>
+		<ExtraCommands>
+			<Add after="copyplugin.cmd $(TARGET_OUTPUT_DIR)" />
+		</ExtraCommands>
+		<Unit filename="../../src/IPlugin.h" />
+		<Unit filename="../../src/IPluginImport.h" />
+		<Unit filename="Dependency/HttpRequest/HttpRequest.cpp" />
+		<Unit filename="Dependency/HttpRequest/HttpRequest.h" />
+		<Unit filename="Dependency/HttpRequest/HttpResponse.cpp" />
+		<Unit filename="Dependency/HttpRequest/HttpResponse.h" />
+		<Unit filename="Dependency/SafeFunctions/SafeFunctions.cpp" />
+		<Unit filename="Dependency/SafeFunctions/SafeFunctions.h" />
+		<Unit filename="Dependency/SimpleSock/SimpleSock.cpp" />
+		<Unit filename="Dependency/SimpleSock/SimpleSock.h" />
+		<Unit filename="Dependency/SimpleSock/SimpleSockTCP.cpp" />
+		<Unit filename="Dependency/SimpleSock/SimpleSockTCP.h" />
+		<Unit filename="Dependency/StringTools/StringTools.cpp" />
+		<Unit filename="Dependency/StringTools/StringTools.h" />
+		<Unit filename="Dependency/jsoncpp/include/json/json.h" />
+		<Unit filename="Dependency/jsoncpp/src/lib_json/json_reader.cpp" />
+		<Unit filename="Dependency/jsoncpp/src/lib_json/json_value.cpp" />
+		<Unit filename="Dependency/jsoncpp/src/lib_json/json_valueiterator.inl" />
+		<Unit filename="Dependency/jsoncpp/src/lib_json/json_writer.cpp" />
+		<Unit filename="Kodi.cpp" />
+		<Unit filename="Kodi.h" />
+		<Unit filename="KodiApi.cpp" />
+		<Unit filename="KodiApi.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="NickyVoiceControl" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/NickyVoiceControl" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DDEBUG" />
+					<Add directory="dependency" />
+					<Add directory="dependency/jsoncpp/include" />
+					<Add directory="dependency/sphinxbase/include" />
+					<Add directory="dependency/sphinxbase/include/win32" />
+					<Add directory="dependency/pocketsphinx/include" />
+				</Compiler>
+				<Linker>
+					<Add library="dependency/sphinxbase/bin/sphinxbase.lib" />
+					<Add library="dependency/pocketsphinx/bin/pocketsphinx.lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/NickyVoiceControl" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++11" />
+			<Add option="-fexceptions" />
+			<Add option="-DWIN32" />
+		</Compiler>
+		<Unit filename="dependency/SimpleLog/SimpleLog.cpp" />
+		<Unit filename="dependency/SimpleLog/SimpleLog.h" />
+		<Unit filename="dependency/SimpleLog/SimpleLog.inl" />
+		<Unit filename="dependency/StringTools/StringTools.cpp" />
+		<Unit filename="dependency/StringTools/StringTools.h" />
+		<Unit filename="dependency/jsoncpp/include/json/assertions.h" />
+		<Unit filename="dependency/jsoncpp/include/json/json.h" />
+		<Unit filename="dependency/jsoncpp/src/lib_json/json_reader.cpp" />
+		<Unit filename="dependency/jsoncpp/src/lib_json/json_value.cpp" />
+		<Unit filename="dependency/jsoncpp/src/lib_json/json_writer.cpp" />
+		<Unit filename="dependency/sphinxbase/include/sphinxbase/ad.h" />
+		<Unit filename="src/FragParser.cpp" />
+		<Unit filename="src/FragParser.h" />
+		<Unit filename="src/IIntentParser.h" />
+		<Unit filename="src/IPluginImport.h" />
+		<Unit filename="src/IVoiceControl.h" />
+		<Unit filename="src/IVoiceRecogniser.h" />
+		<Unit filename="src/LibraryHelper.cpp" />
+		<Unit filename="src/LibraryHelper.h" />
+		<Unit filename="src/NickyVoiceControl.cpp" />
+		<Unit filename="src/NickyVoiceControl.h" />
+		<Unit filename="src/PluginDetails.cpp" />
+		<Unit filename="src/PluginDetails.h" />
+		<Unit filename="src/PluginFactory.cpp" />
+		<Unit filename="src/PluginFactory.h" />
+		<Unit filename="src/SphinxDict.cpp" />
+		<Unit filename="src/SphinxDict.h" />
+		<Unit filename="src/SphinxGram.cpp" />
+		<Unit filename="src/SphinxGram.h" />
+		<Unit filename="src/SphinxRecogniser.cpp" />
+		<Unit filename="src/SphinxRecogniser.h" />
+		<Unit filename="src/VoiceCommand.cpp" />
+		<Unit filename="src/VoiceCommand.h" />
+		<Unit filename="src/main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

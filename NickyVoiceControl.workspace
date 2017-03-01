@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="NickyVoiceControl.cbp" />
+		<Project filename="NVC - Tests.cbp" />
+		<Project filename="plugins/Internal/Internal.cbp" />
+		<Project filename="plugins/Kodi/Kodi.cbp" />
+		<Project filename="plugins/Voice/Voice.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

@@ -1,0 +1,23 @@
+{
+	"MyName" : "Sarah",
+	"Plugins" : ["Internal", "Voice", "Kodi"],
+	"VoiceAreas" :
+	[
+		{
+			"Name" : "HOME",
+			"VoiceCommands" : 
+			[
+				{"Phrase" : "Stop", "Command" : "Internal.Stop"},
+				{"Phrase" : "Quelle heure est-il ?", "Command" : "Internal.DireHeure"},
+				{"Phrase" : "Quel jour sommes-nous ?", "Command" : "Internal.DireDate"},
+        {"Phrase" : "Clochette et plus vite que ça", "Command" : "Kodi.PlayMovie(36)"},
+        {"Phrase" : "Je veux écouter Clochette", "Command" : "Kodi.PlayMovie(36)"},
+        {"Phrase" : "Je voudrais regarder <Kodi.Films>", "Command" : "Kodi.PlayMovie($1)"},
+        {"Phrase" : "Stop le film", "Command" : "Kodi.Stop"},
+        {"Phrase" : "Plus fort", "Command" : "Kodi.IncrementVol(10)"},
+        {"Phrase" : "Moins fort", "Command" : "Kodi.DecrementVol(10)"},
+        {"Phrase" : "Dit coucou", "Command" : "Voice.Dire(coucou)"}
+			]
+		}
+	]
+}

@@ -1,0 +1,36 @@
+{
+	"MyName" : "Sarah",
+	"Plugins" : ["Internal", "Kodi"],
+	"VoiceAreas" :
+	[
+		{
+			"Name" : "HOME",
+			"VoiceCommands" : 
+			[
+				{"Phrase" : "Quelle heure est-il ?", "Command" : "INTERNAL.DireHeure"},
+				{"Phrase" : "Quel jour sommes-nous ?", "Command" : "INTERNAL.DireDate"},
+				{"Phrase" : "Quelle sont les prévisions météorologique ?", "Command" : "INTERNAL.PrevisionsMeteo"},
+				{"Phrase" : "Je voudrais écouter <Kodi.music>", "Command" : "Kodi.JoueMusique($1)"},
+				{"Phrase" : "Je voudrais regarder <Kodi.Films> dans <Kodi.lieu>", "Command" : "Kodi.JoueFilm($2,$1)"}, 
+				{"Phrase" : "Je voudrais regarder <Kodi.Films>", "Command" : "Kodi.JoueFilm($1)"}, 
+        {"Phrase" : "Je voudrais regarder <Kodi.Films>", "Command" : "Kodi.PlayMovie($1)"},
+				{"Phrase" : "Je voudrais regarder un film avec <Kodi.acteur>", "Command" : "Kodi.ChercheFilm($1)"}, 
+				{"Phrase" : "Mode Kodi", "Command" : "INTERNAL.SwitchArea(MODE_KODI)"}
+			]
+		},
+		{
+			"Name" : "MODE_KODI",
+			"VoiceCommands" : 
+			[
+				{"Phrase" : "Lecture", "Command" : "Kodi.Start"},
+				{"Phrase" : "Pause", "Command" : "Kodi.Pause"},
+				{"Phrase" : "Stop", "Command" : "Kodi.Stop"},
+				{"Phrase" : "Volume plus", "Command" : "Kodi.VolumeIncrease"},
+				{"Phrase" : "Plus fort", "Command" : "Kodi.VolumeIncrease"},
+				{"Phrase" : "Volume moins", "Command" : "Kodi.VolumeDecrease"},
+				{"Phrase" : "Moins fort", "Command" : "Kodi.VolumeDecrease"},
+				{"Phrase" : "Encore", "Command" : "Kodi.RepeatLast"}
+			]
+		}
+	]
+}
